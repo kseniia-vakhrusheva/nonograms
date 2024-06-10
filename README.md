@@ -45,14 +45,11 @@ In this project, I implemented a classic Nonograms puzzle game using HTML, CSS, 
 13. **Dark/Light Themes**:
     - Implemented theme switching between dark and light modes.
 
-14. **Difficulty Levels**:
-    - Added three difficulty levels: easy (5x5), medium (10x10), and hard (15x15), each with at least 5 templates.
-
-15. **High Score Table**:
+14. **High Score Table**:
     - A high score table saves the latest 5 win results, sorted by time and includes puzzle details and completion time.
 
-16. **Random Game**:
+15. **Random Game**:
     - A "random game" button selects a random template and level for a new game.
 
-17. **Solution Button**:
+16. **Solution Button**:
     - A "Solution" button fills the grid with the correct solution without marking it as a win.
