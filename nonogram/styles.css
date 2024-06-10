@@ -1,0 +1,151 @@
+:root {
+  --bg-color: linear-gradient(360deg, rgba(185, 179, 179, 0.808), rgba(223, 206, 206, 0));
+  --bg-color-btn: gainsboro;
+  --bg-color-btn-hover: rgb(144, 156, 161);
+  --cell-color-gray:  gainsboro;
+  --cell-color-black: rgba(33, 37, 51, 0.973);
+  --text-color: rgba(33, 37, 51, 0.973);
+  --border: rgba(33, 37, 51, 0.973);
+}
+
+:root body.dark {
+  --bg-color: linear-gradient(360deg, rgba(3, 3, 3, 0.25), rgba(5, 0, 0, 0.63));
+  --bg-color-btn: rgba(33, 37, 51, 0.973);
+  --bg-color-btn-hover: rgb(117, 136, 145);
+  --cell-color-gray:  rgba(33, 37, 51, 0.973);
+  --cell-color-black: gainsboro;
+  --text-color:  gainsboro;
+  --border:  gainsboro;
+} 
+
+body, html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  color: var(--text-color);
+}
+
+body {
+  align-items: center;
+  background-image: var(--bg-color), url('./images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header,
+.footer,
+.footerSecond,
+.footerThird {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 706px;
+  width: 100%;
+  max-height: 10px;
+  gap: 5%;
+  
+}
+
+.fiveSizeField, 
+.tenSizeField,
+.fifteenSizeField,
+.footer li,
+.footerSecond li,
+.footerThird li {
+  font-size: 40px;
+  border-radius: 2px;
+  border: 3px solid var(--border);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--bg-color-btn);
+  margin: 10px 0;
+  cursor: pointer;
+}
+@media (max-width: 768px)  {
+  .fiveSizeField, 
+  .tenSizeField,
+  .fifteenSizeField,
+  .footer li,
+  .footerSecond li,
+  .footerThird li {
+    font-size: 5vw;
+  }
+}
+
+.canvas {
+  border: 3px solid var(--border);
+  background-color: var(--bg-color-btn);
+  width: 100%; 
+  max-width: 700px; 
+  height: auto; 
+}
+
+.fiveSizePics,
+.tenSizePics,
+.fifteenSizePics {
+  position: absolute;
+  background: var(--bg-color-btn);
+  padding: 0;
+  list-style-type: none;
+  border: 3px solid var(--border);
+  width: 100%;
+  border-radius: 2px;
+  display: none;
+  font-size: 40px;
+  top: 100%;
+  left: -3px;
+  z-index: 1;
+}
+
+.fiveSizePics li,
+.tenSizePics li,
+.fifteenSizePics li {
+  width: 100%;
+}
+@media (max-width: 768px)  {
+  .fiveSizePics li{
+    font-size: 5vw;
+  }
+}
+
+
+.fiveSizeField:hover > ul,
+.tenSizeField:hover > ul,
+.fifteenSizeField:hover > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fiveSizeField ul li:hover,
+.tenSizeField ul li:hover,
+.fifteenSizeField ul li:hover,
+.fiveSizeField:hover, 
+.tenSizeField:hover,
+.fifteenSizeField:hover,
+.footer li:hover,
+.footerSecond li:hover,
+.footerThird li:hover {
+  background-color: var(--bg-color-btn-hover);
+}
+
+.footer li,
+.footerSecond li,
+.footerThird li {
+  padding: 0;
+}
